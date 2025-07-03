@@ -21,7 +21,7 @@ export default function Menu({ year }: MenuProps) {
             <ul className="space-y-4">
                 {
                     items.length > 0 ?
-                        MenuOptions.filter(elem => elem.year == year).map((item) => (
+                    items.map((item) => (
                             <li key={item.index}>
                                 <div className="flex items-center gap-3 text-gray-700 hover:text-shadow-md">
                                     {item.icon && <Icon icon={item.icon} width="20" height="20" />}

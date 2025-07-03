@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import { HomePage } from '../pages/homePage';
 import { Routes2024 } from '../pages/2024/routes';
-import { BadRequestPage } from '../pages/Page404';
+import { BadRequestPage } from '../pages/page404';
 
 export const AppRoutes = () => {
     return (
