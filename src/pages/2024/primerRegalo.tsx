@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import { Instructions } from "../../components/global/pages/Instructions"
 import { Solution } from "../../components/global/pages/solution"
+import { TextInput } from "../../components/global/inputs/textInput";
+import { PrimaryButton } from "../../components/global/buttons/primaryButton";
 
 export const PrimerRegaloPage = () => {
 
@@ -30,16 +32,16 @@ export const PrimerRegaloPage = () => {
             
             <div className="container mx-auto p-4">
                 <h1 className="text-gray-700 font-bold mb-2">Respuesta</h1>
-                <input type="text" className="w-full p-2 border border-gray-300 rounded mb-4" placeholder="Ejemplo: [3, 1, 2, 3, 4, 2]" ref={inputRef}/>
-             
-                <button className="bg-blue-500 text-white p-2 rounded mb-4" onClick={resolved}>Resolver</button>
+                <TextInput placeholder="Ejemplo: [3, 1, 2, 3, 4, 2]" inputRef={inputRef} />
+               
+                <PrimaryButton title="Resolver" method={resolved} />
                <p>{list}</p>
             </div>
             
-            <Solution text='function prepareGifts(gifts: number[]): string[] {
+            <Solution text={`function prepareGifts(gifts: number[]): string[] {
             const uniqueGifts = Array.from(new Set(gifts));
             return uniqueGifts.sort((a, b) => a - b).map(String);
-            }'/>
+            }`}/>
 
         </>
     )
