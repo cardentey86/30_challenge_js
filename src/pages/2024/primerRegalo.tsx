@@ -3,6 +3,7 @@ import { Instructions } from "../../components/global/pages/Instructions"
 import { Solution } from "../../components/global/pages/solution"
 import { TextInput } from "../../components/global/inputs/textInput";
 import { PrimaryButton } from "../../components/global/buttons/primaryButton";
+import { Response } from "../../components/global/pages/response";
 
 export const PrimerRegaloPage = () => {
 
@@ -30,13 +31,11 @@ export const PrimerRegaloPage = () => {
             <Instructions title="Primer Regalo repetido" description="Santa Claus 🎅 ha recibido una lista de números mágicos que representan regalos 🎁, pero algunos de ellos están duplicados y deben ser eliminados para evitar confusiones. Además, los regalos deben ser ordenados en orden ascendente antes de entregárselos a los elfos.
             Tu tarea es escribir una función que reciba una lista de números enteros (que pueden incluir duplicados) y devuelva una nueva lista sin duplicados, ordenada en orden ascendente." />
             
-            <div className="container mx-auto p-4">
-                <h1 className="text-gray-700 font-bold mb-2">Respuesta</h1>
+            <Response>
                 <TextInput placeholder="Ejemplo: [3, 1, 2, 3, 4, 2]" inputRef={inputRef} />
-               
                 <PrimaryButton title="Resolver" method={resolved} />
-               <p>{list}</p>
-            </div>
+                <p>{list}</p>
+            </Response>
             
             <Solution text={`function prepareGifts(gifts: number[]): string[] {
             const uniqueGifts = Array.from(new Set(gifts));
