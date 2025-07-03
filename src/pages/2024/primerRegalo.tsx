@@ -29,7 +29,7 @@ export const PrimerRegaloPage = () => {
             Tu tarea es escribir una función que reciba una lista de números enteros (que pueden incluir duplicados) y devuelva una nueva lista sin duplicados, ordenada en orden ascendente." />
             
             <div className="container mx-auto p-4">
-                <h1 className="text-gray-700 text-xl font-bold mb-2">Respuesta</h1>
+                <h1 className="text-gray-700 font-bold mb-2">Respuesta</h1>
                 <input type="text" className="w-full p-2 border border-gray-300 rounded mb-4" placeholder="Ejemplo: [3, 1, 2, 3, 4, 2]" ref={inputRef}/>
              
                 <button className="bg-blue-500 text-white p-2 rounded mb-4" onClick={resolved}>Resolver</button>
